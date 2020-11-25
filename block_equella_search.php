@@ -77,7 +77,7 @@ class block_equella_search extends block_list {
         if ($course->id !== SITEID and has_capability('block/equella_search:search', $context)) {
             $equellasearchurl = new moodle_url('/blocks/equella_search/equella_search_api.php', array('courseid'=>$this->instance->pageid));
             $this->content->items[] = html_writer::link($equellasearchurl, get_string('searchaction', 'block_equella_search'));
-            $iconurl = new moodle_url('/mod/equella/pix/icon-red.gif');
+            $iconurl = new moodle_url('/mod/equella/pix/icon.png');
             $icon = html_writer::empty_tag('img', array('src' => $iconurl, 'class' => 'icon', 'alt' => 'equella-icon'));
             $this->content->icons[]= $icon;
         }
